@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Sweet Birthday Wishes</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Georgia', 'Palatino Linotype', 'Palatino', serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #4a4a4a;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .invitation-container {
+      background: #ffffffdd; /* translucent white */
+      max-width: 360px;
+      width: 100%;
+      height: 600px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(140, 144, 158, 0.2);
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 30px 30px 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Scrollbar for modern browsers */
+    .invitation-container::-webkit-scrollbar {
+      width: 7px;
+    }
+    .invitation-container::-webkit-scrollbar-thumb {
+      background: #b5c7d3;
+      border-radius: 5px;
+      border: 2px solid #e9ecf1;
+    }
+    .invitation-container::-webkit-scrollbar-track {
+      background: #f0f3f7;
+    }
+
+    h1, h2 {
+      font-family: 'Palatino Linotype', 'Palatino', serif;
+      color: #7c8a97;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(255 255 255 / 0.75);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.15rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.9rem;
+      font-style: italic;
+      color: #9aa7b7;
+    }
+
+    .greeting-text {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #666c79;
+      text-align: center;
+      padding: 0 12px;
+      font-weight: 300;
+      user-select: text;
+    }
+
+    /* Photo gallery */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+      grid-gap: 14px;
+      justify-items: center;
+    }
+
+    .photo-gallery img {
+      border-radius: 16px;
+      width: 100%;
+      max-width: 110px;
+      object-fit: cover;
+      box-shadow: 0 0 12px rgba(172, 184, 201, 0.4);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      border: 2.5px solid #dbe3ea;
+      filter: drop-shadow(0 2px 6px rgba(119, 132, 157, 0.15));
+    }
+    .photo-gallery img:hover, .photo-gallery img:focus {
+      transform: scale(1.07);
+      border-color: #a4bad0;
+      box-shadow: 0 8px 18px rgba(164, 186, 208, 0.6);
+      outline: none;
+    }
+
+    /* Video Section */
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .video-section video {
+      border-radius: 18px;
+      max-width: 100%;
+      box-shadow: 0 6px 28px rgba(151, 165, 187, 0.35);
+      cursor: pointer;
+      outline-offset: 3px;
+      outline-color: #a7bed7;
+      outline-style: solid;
+      outline-width: 0;
+      transition: outline-width 0.3s ease;
+    }
+    .video-section video:focus, .video-section video:hover {
+      outline-width: 4px;
+    }
+
+    /* Footer / signature */
+    .footer {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #9ea9b6;
+      font-style: italic;
+      user-select: none;
+    }
+
+    /* Responsive text scaling for smaller screens */
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .greeting-text {
+        font-size: 0.95rem;
+      }
+      .photo-gallery img {
+        max-width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="invitation-container" role="main" aria-label="Birthday invitation content, scroll down to explore photos and videos.">
+    <section aria-labelledby="title-heading">
+      <h1 id="title-heading">Happy Birthday</h1>
+      <h2>Wishing you calm & joy</h2>
+      <p class="greeting-text">
+        On this special day, may peace and happiness gently fill your heart.<br /><br />
+        May your year ahead bring quiet moments, warm smiles, and beautiful memories.<br /><br />
+        Scroll down softly to enjoy cherished photos and gentle videos from your celebration.
+      </p>
+    </section>
+
+    <section aria-labelledby="photos-heading" class="photo-gallery" id="photos">
+      <h2 id="photos-heading">Moments To Remember</h2>
+      <!-- Replace src with your own photos -->
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Birthday cake with candles" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1532634737-701cd2372f5f?auto=format&fit=crop&w=400&q=80" alt="Friends celebrating with balloons" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80" alt="Group of friends having fun" tabindex="0" />
+      <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80" alt="Festive decorations with lights" tabindex="0" />
+    </section>
+
+    <section class="video-section" aria-labelledby="videos-heading" id="videos">
+      <h2 id="videos-heading">Gentle Videos</h2>
+      <!-- Replace source with your own video links -->
+      <video controls preload="metadata" aria-describedby="video1desc" tabindex="0" muted>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <p id="video1desc" class="greeting-text" style="margin-top: 0;">
+        A calming flower video to brighten your day.
+      </p>
+
+      <video controls preload="metadata" aria-describedby="video2desc" tabindex="0" muted>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.webm" type="video/webm" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+      <p id="video2desc" class="greeting-text" style="margin-top: 0;">
+        Peaceful bees buzzing over blooming flowers.
+      </p>
+    </section>
+
+    <footer class="footer" aria-label="Signature">
+      With warm wishes on your special day
+    </footer>
+  </div>
+</body>
+</html>
+
